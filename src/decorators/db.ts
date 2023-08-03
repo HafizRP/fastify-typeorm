@@ -4,6 +4,7 @@ import fastifyPlugin from "fastify-plugin";
 import { DataSource } from "typeorm";
 import { TodoList } from "../modules/todolist/entity";
 import { User } from "../modules/user/entity";
+
 export default fastifyPlugin(async (app) => {
   const connection = new DataSource({
     type: "mysql",
