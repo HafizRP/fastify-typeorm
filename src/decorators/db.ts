@@ -18,7 +18,6 @@ export default fastifyPlugin(async (app) => {
 
   try {
     const d = await connection.initialize();
-
     app.decorate("db", {
       user: d.getRepository(User),
       todolist: d.getRepository(TodoList),

@@ -5,6 +5,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   OneToMany,
+  Index,
 } from "typeorm";
 import { TodoList } from "../todolist/entity";
 
@@ -14,13 +15,14 @@ export class User {
   id: string;
 
   @Column()
-  username: string;
+  @Index({ unique: true })
+  username!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @Column()
-  email: string;
+  email!: string;
 
   @CreateDateColumn()
   createdAt: Date;

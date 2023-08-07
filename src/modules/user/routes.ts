@@ -1,9 +1,5 @@
 import { FastifyInstance } from "fastify";
 
-async function userRoutes(server: FastifyInstance) {
-  server.get("/", (req, res) => {
-    res.send("Hello World!");
-  });
-}
+async function userRoutes(server: FastifyInstance) {}
 
 export default userRoutes;
